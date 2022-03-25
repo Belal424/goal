@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    /* font-family: 'Cairo', sans-serif; */
+    font-family: 'Tajawal', sans-serif;
+}
+:root{
+    --main:#C04848;
+    --secondary:#480048;
+    --gradient: linear-gradient(25deg, var(--main) , var(--secondary));
+}
+body {
+    background-color: #121212;
+}
+h1 {
+    text-align: center;
+    margin: 50px;
+}
+.cont {
+    padding: 25px 0;
+    position: relative;
+}
+.cont .goals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    grid-gap: 40px;
+    z-index: -3;
+}
+.cont .goals .card{
+    min-height: 100px;
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: #00000050 0px 0px 10px 0px;
+}
+.cont .goals .card img{
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: -2;
+}
+.cont .goals .card .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    transition: .3s;
+}
+.cont .goals .card .text:hover {
+    opacity: 1;
+}
+.cont .goals .card .text h3{
+    position: absolute;
+    z-index: 1000;
+    margin: 10px;
+    right: 0;
+}
+.cont .goals .card .text button{
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    padding: 10px;
+    background: transparent;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.cont .goals .card .text:after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:#121212;
+    opacity: 0.9;
+}
